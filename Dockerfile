@@ -17,11 +17,4 @@ RUN apt-get -y update \
 RUN pip install PyYAML boto3 Pillow requests Shapely eventlet gunicorn
 RUN pip install git+git://github.com/mapproxy/mapproxy.git
 
-RUN mkdir /usr/local/mapproxy
-
-RUN mkdir /usr/local/mapproxy/cache_data
-RUN chmod a+rwx /usr/local/mapproxy/cache_data
-
-WORKDIR /usr/local/mapproxy
-
 EXPOSE 80
